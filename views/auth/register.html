@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Digital Library</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="nav-wrapper">
+            <div class="brand-logo"><span></span> DigitalLibrary</div>
+            <nav><ul class="nav-menu" id="nav-menu"></ul></nav>
+        </div>
+    </header>
+
+    <main class="app-container">
+        <div class="form-card" style="max-width:480px; margin:4rem auto;">
+            <h2 style="margin-bottom:1.5rem;">Create an Account</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" name="username" required minlength="2" placeholder="Enter username">
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" name="password" required minlength="6" placeholder="At least 6 characters">
+                </div>
+                <div class="form-group">
+                    <label>Account Type</label>
+                    <select name="role" id="role-select" required>
+                        <option value="user" selected>Library Member</option>
+                        <option value="admin">Librarian (Admin, requires approval)</option>
+                    </select>
+                    <p class="form-hint" id="role-hint">Standard members can browse and borrow books.</p>
+                </div>
+                <div class="form-group" id="admin-message-group" hidden>
+                    <label>Why do you need librarian access?</label>
+                    <textarea name="message" rows="3" placeholder="Briefly explain your role (e.g., library staff, course project)..."></textarea>
+                    <p class="form-hint">An existing administrator must approve your request before admin features unlock.</p>
+                </div>
+                <button type="submit" id="register-btn" class="btn btn-primary" style="width:100%; padding:0.75rem;">Register Account</button>
+            </form>
+            <p style="margin-top:1.5rem; text-align:center; font-size:0.9rem; color:var(--text-muted);">
+                Already have an account? <a href="/auth/login.html">Sign in here</a>
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="footer-year"></span> Digital Library System. Built by Yeabkal Wondwosen.</p>
+    </footer>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/auth/register.js"></script>
+</body>
+</html>

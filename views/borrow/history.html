@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Borrows - Digital Library</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="nav-wrapper">
+            <div class="brand-logo"><span></span> DigitalLibrary</div>
+            <nav><ul class="nav-menu" id="nav-menu"></ul></nav>
+        </div>
+    </header>
+
+    <main class="app-container" style="padding:2rem; max-width:1200px; margin:0 auto;">
+        <h2>My Checkout Logs</h2>
+        <div class="table-responsive-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Book Title</th>
+                        <th>ISBN</th>
+                        <th>Check-out Date</th>
+                        <th>Return Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="history-body"></tbody>
+            </table>
+        </div>
+        <div id="pagination"></div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="footer-year"></span> Digital Library System. Built by Yeabkal Wondwosen.</p>
+    </footer>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/borrow/history.js"></script>
+</body>
+</html>

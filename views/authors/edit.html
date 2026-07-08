@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Author - Digital Library</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="nav-wrapper">
+            <div class="brand-logo"><span></span> DigitalLibrary</div>
+            <nav><ul class="nav-menu" id="nav-menu"></ul></nav>
+        </div>
+    </header>
+
+    <main class="app-container" style="padding:2rem; max-width:1200px; margin:0 auto;">
+        <div class="form-card">
+            <h2 id="form-title">Edit Author</h2>
+            <form id="edit-author-form" style="margin-top:1.5rem;">
+                <div class="form-group">
+                    <label>Author Full Name</label>
+                    <input type="text" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Nationality</label>
+                    <input type="text" name="nationality">
+                </div>
+                <div class="form-group">
+                    <label>Birth Year</label>
+                    <input type="number" name="birth_year">
+                </div>
+                <div class="form-group">
+                    <label>Biography</label>
+                    <textarea name="biography" rows="4"></textarea>
+                </div>
+                <div class="row-actions" style="margin-top:2rem;">
+                    <button type="submit" class="btn btn-primary">Update Author</button>
+                    <a href="/authors/index.html" class="btn btn-secondary">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="footer-year"></span> Digital Library System. Built by Yeabkal Wondwosen.</p>
+    </footer>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/authors/edit.js"></script>
+</body>
+</html>
