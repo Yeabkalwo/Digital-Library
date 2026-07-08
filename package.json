@@ -1,0 +1,27 @@
+{
+  "name": "digital-library-system",
+  "version": "1.0.0",
+  "description": "Digital Library Management System - Final Project",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "setup-db": "node scripts/setup-db.js"
+  },
+  "author": "Yeabkal Wondwosen",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.7",
+    "csurf": "^1.2.2",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-session": "^1.17.3",
+    "jsonwebtoken": "^9.0.3",
+    "mysql2": "^3.22.6",
+    "pg": "^8.21.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
