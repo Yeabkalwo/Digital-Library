@@ -7,9 +7,11 @@ class Book {
         let paramIndex = 1;
 
         if (search && search.trim() !== '') {
-            whereClause += ` AND (b.title LIKE $${paramIndex} OR b.description LIKE $${paramIndex} OR b.isbn LIKE $${paramIndex} OR a.name LIKE $${paramIndex})`;
-            queryValues.push(`%${search.trim()}%`);
-            paramIndex++;
+            // One placeholder per LIKE — MySQL needs a bound value for each "?"
+            whereClause += ` AND (b.title LIKE $${paramIndex} OR b.description LIKE $${paramIndex + 1} OR b.isbn LIKE $${paramIndex + 2} OR a.name LIKE $${paramIndex + 3})`;
+            const term = `%${search.trim()}%`;
+            queryValues.push(term, term, term, term);
+            paramIndex += 4;
         }
 
         if (status && status.trim() !== '') {
@@ -97,3 +99,4 @@ class Book {
 }
 
 module.exports = Book;
+
