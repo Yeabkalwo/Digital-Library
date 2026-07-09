@@ -18,6 +18,7 @@ exports.listBooks = async (req, res) => {
     try {
         return res.json(await fetchBooks(req));
     } catch (err) {
+        console.error('Catalog list error:', err.message);
         return res.status(500).json({ error: 'Could not access the library catalog.' });
     }
 };
